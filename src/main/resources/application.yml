@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: dlq-triage-pipeline
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dlqtriage
+    username: root
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: dlq-triage-group
+      auto-offset-reset: earliest
+
+
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: llama3
+          temperature: 0.1
