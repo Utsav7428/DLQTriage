@@ -28,7 +28,7 @@ graph TD
     end
 
     subgraph Messaging ["Message Broker"]
-        Kafka[ Kafka <br> (dlq topic)"]
+        Kafka[ Kafka <br> "(dlq topic)"]
     end
 
     subgraph App ["          "]
